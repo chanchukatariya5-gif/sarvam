@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f6" />
+    <title>Care coordination demo | Sarvam</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Care coordination demo home">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <span>Care<span class="brand-light">coord</span></span>
+        </a>
+        <span class="demo-tag"><span class="status-dot"></span> Sarvam demo</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">PATIENT COORDINATION</p>
+        <h1 id="page-title">A little help, right when it’s needed.</h1>
+        <p class="intro-copy">
+          Explore a sample conversation about appointments and care logistics.
+        </p>
+      </section>
+
+      <section class="privacy-note" aria-label="Demo privacy notice">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <p>
+          <strong>Demo only.</strong> Use made-up scenarios, not real patient
+          information. This chat is not connected to a clinic, insurer, or
+          scheduling system and does not provide medical advice.
+        </p>
+      </section>
+
+      <section class="chat-card" aria-label="Patient coordination chat">
+        <div class="chat-header">
+          <div class="assistant-avatar" aria-hidden="true">C</div>
+          <div class="assistant-details">
+            <h2>Care coordinator</h2>
+            <p><span class="status-dot"></span> Ready to help with general logistics</p>
+          </div>
+          <button class="clear-button" id="clear-chat" type="button">New chat</button>
+        </div>
+
+        <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions text">
+          <div class="message assistant-message">
+            <p>Hi there. I can help you explore general appointment preparation and care coordination using fictional examples. What would you like to try?</p>
+            <span class="message-time">Sarvam assistant</span>
+          </div>
+        </div>
+
+        <div class="suggestions" aria-label="Sample prompts">
+          <button type="button" data-prompt="Using a fictional example, what information might someone prepare before a routine appointment?">Prepare for an appointment</button>
+          <button type="button" data-prompt="Using a fictional example, explain the general steps involved in checking insurance coverage before a visit.">Understand coverage steps</button>
+          <button type="button" data-prompt="Write a friendly, fictional follow-up message reminding someone to contact their clinic with questions after a visit.">Draft a follow-up</button>
+        </div>
+
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="message-input">Your message</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            maxlength="4000"
+            placeholder="Try a fictional scenario…"
+            autocomplete="off"
+            required
+          ></textarea>
+          <button class="send-button" id="send-button" type="submit" aria-label="Send message">
+            <span aria-hidden="true">↑</span>
+          </button>
+        </form>
+        <p class="composer-hint">Please don’t enter names, contact details, or medical records.</p>
+      </section>
+      <footer class="footer">A local prototype powered by Sarvam AI</footer>
+    </main>
+  </body>
+</html>
